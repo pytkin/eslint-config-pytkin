@@ -1,6 +1,6 @@
 # eslint-config-pytkin-react
 
-Based on [eslint-fonfig-react-app](https://github.com/facebookincubator/create-react-app/blob/master/packages/eslint-config-react-app/README.md)(v2.0.0)
+Based on [eslint-fonfig-react-app](https://github.com/facebookincubator/create-react-app/blob/master/packages/eslint-config-react-app/README.md) (v2.0.0)
 
 ## Usage
 
