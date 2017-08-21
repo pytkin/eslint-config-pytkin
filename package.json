@@ -5,8 +5,12 @@
   "bugs": {
     "url": "https://github.com/pytkin/eslint-config-pytkin-react/issues"
   },
+  main: "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "react.js",
+    "flow.js",
+    "react-flow.js"
   ],
   "peerDependencies": {
     "babel-eslint": "^7.2.3",
