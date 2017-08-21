@@ -1,19 +1,5 @@
 'use strict';
 
-// Inspired by https://github.com/airbnb/javascript but less opinionated.
-
-// We use eslint-loader so even warnings are very visible.
-// This is why we only use "WARNING" level for potential errors,
-// and we don't use "ERROR" level at all.
-
-// In the future, we might create a separate list of rules for production.
-// It would probably be more strict.
-
-// The ESLint browser environment defines all browser globals as valid,
-// even though most people don't know some of them exist (e.g. `name` or `status`).
-// This is dangerous as it hides accidentally undefined variables.
-// We blacklist the globals that we deem potentially confusing.
-// To use them, explicitly reference them, e.g. `window.name` or `window.status`.
 var restrictedGlobals = [
   'addEventListener',
   'blur',
@@ -100,121 +86,9 @@ module.exports = {
   },
 
   rules: {
-    // http://eslint.org/docs/rules/
-    'array-callback-return': 'warn',
-    'default-case': ['warn', { commentPattern: '^no default$' }],
-    'dot-location': ['warn', 'property'],
-    eqeqeq: ['warn', 'allow-null'],
-    'new-parens': 'warn',
-    'no-array-constructor': 'warn',
-    'no-caller': 'warn',
-    'no-cond-assign': ['warn', 'always'],
-    'no-const-assign': 'warn',
-    'no-control-regex': 'warn',
-    'no-delete-var': 'warn',
-    'no-dupe-args': 'warn',
-    'no-dupe-class-members': 'warn',
-    'no-dupe-keys': 'warn',
-    'no-duplicate-case': 'warn',
-    'no-empty-character-class': 'warn',
-    'no-empty-pattern': 'warn',
-    'no-eval': 'warn',
-    'no-ex-assign': 'warn',
-    'no-extend-native': 'warn',
-    'no-extra-bind': 'warn',
-    'no-extra-label': 'warn',
-    'no-fallthrough': 'warn',
-    'no-func-assign': 'warn',
-    'no-implied-eval': 'warn',
-    'no-invalid-regexp': 'warn',
-    'no-iterator': 'warn',
-    'no-label-var': 'warn',
-    'no-labels': ['warn', { allowLoop: true, allowSwitch: false }],
-    'no-lone-blocks': 'warn',
-    'no-loop-func': 'warn',
-    'no-mixed-operators': [
-      'warn',
-      {
-        groups: [
-          ['&', '|', '^', '~', '<<', '>>', '>>>'],
-          ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-          ['&&', '||'],
-          ['in', 'instanceof'],
-        ],
-        allowSamePrecedence: false,
-      },
-    ],
-    'no-multi-str': 'warn',
-    'no-native-reassign': 'warn',
-    'no-negated-in-lhs': 'warn',
-    'no-new-func': 'warn',
-    'no-new-object': 'warn',
-    'no-new-symbol': 'warn',
-    'no-new-wrappers': 'warn',
-    'no-obj-calls': 'warn',
-    'no-octal': 'warn',
-    'no-octal-escape': 'warn',
-    'no-redeclare': 'warn',
-    'no-regex-spaces': 'warn',
-    'no-restricted-syntax': ['warn', 'WithStatement'],
-    'no-script-url': 'warn',
-    'no-self-assign': 'warn',
-    'no-self-compare': 'warn',
-    'no-sequences': 'warn',
-    'no-shadow-restricted-names': 'warn',
-    'no-sparse-arrays': 'warn',
-    'no-template-curly-in-string': 'warn',
-    'no-this-before-super': 'warn',
-    'no-throw-literal': 'warn',
-    'no-undef': 'error',
+    // no styles rules (=> prettier)
+    "jsx-quotes": 0,
     'no-restricted-globals': ['error'].concat(restrictedGlobals),
-    'no-unexpected-multiline': 'warn',
-    'no-unreachable': 'warn',
-    'no-unused-expressions': [
-      'warn',
-      {
-        allowShortCircuit: true,
-        allowTernary: true,
-        allowTaggedTemplates: true,
-      },
-    ],
-    'no-unused-labels': 'warn',
-    'no-unused-vars': [
-      'warn',
-      {
-        args: 'none',
-        ignoreRestSiblings: true,
-      },
-    ],
-    'no-use-before-define': [
-      'warn',
-      {
-        functions: false,
-        classes: false,
-        variables: false,
-      },
-    ],
-    'no-useless-computed-key': 'warn',
-    'no-useless-concat': 'warn',
-    'no-useless-constructor': 'warn',
-    'no-useless-escape': 'warn',
-    'no-useless-rename': [
-      'warn',
-      {
-        ignoreDestructuring: false,
-        ignoreImport: false,
-        ignoreExport: false,
-      },
-    ],
-    'no-with': 'warn',
-    'no-whitespace-before-property': 'warn',
-    radix: 'warn',
-    'require-yield': 'warn',
-    'rest-spread-spacing': ['warn', 'never'],
-    strict: ['warn', 'never'],
-    'unicode-bom': ['warn', 'never'],
-    'use-isnan': 'warn',
-    'valid-typeof': 'warn',
     'no-restricted-properties': [
       'error',
       // TODO: reenable once import() is no longer slow.
@@ -238,26 +112,88 @@ module.exports = {
     'import/no-webpack-loader-syntax': 'error',
 
     // https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules
-    'react/jsx-no-comment-textnodes': 'warn',
-    'react/jsx-no-duplicate-props': ['warn', { ignoreCase: true }],
-    'react/jsx-no-target-blank': 'warn',
-    'react/jsx-no-undef': 'error',
-    'react/jsx-pascal-case': [
-      'warn',
+    'react/jsx-closing-bracket-location': 0,
+    'react/jsx-curly-spacing': 0,
+    'react/jsx-equals-spacing': 'never',
+    'react/jsx-indent-props': 0,
+    'react/jsx-indent': [2, 2],
+    'react/jsx-max-props-per-line': 0,
+    'react/jsx-space-before-closing': 'always',
+    'react/jsx-wrap-multilines': 0,
+    'react/jsx-boolean-value': [2, 'never'],
+    'react/jsx-filename-extension': 0,
+    'react/jsx-handler-names': 2, // (?)
+    'react/jsx-key': 2,
+    'react/jsx-no-bind": 2,
+    'react/jsx-no-duplicate-props': 2,
+    'react/jsx-no-literals': 0,
+    'react/jsx-pascal-case': 2,
+    'react/jsx-no-undef': 2,
+    'react/jsx-sort-props': 0,
+    'react/jsx-sort-prop-types': 0, // deprecated
+    'react/jsx-uses-react': 2,
+    'react/jsx-uses-vars': 2,
+    'react/jsx-no-comment-textnodes': 2,
+    'react/jsx-no-target-blank': 2,
+    
+    'react/forbid-component-props': 0,
+    'react/display-name': 0,
+    'react/forbid-prop-types': 0,
+    'react/no-children-prop': 2,
+    'react/no-danger-with-children': 2,
+    'react/no-danger': 0,
+    'react/no-deprecated': 2,
+    'react/no-did-mount-set-state': 2,
+    'react/no-did-update-set-state': 2,
+    'react/no-direct-mutation-state': 2,
+    'react/no-find-dom-node': 2,
+    'react/no-is-mounted': 2,
+    'react/no-multi-comp': 2,
+    'react/no-render-return-value': 2,
+    'react/no-set-state': 0,
+    'react/no-string-refs': 2,
+    'react/no-unescaped-entities': 2,
+    'react/no-unknown-property': 2,
+    'react/no-unused-prop-types': 2,
+    'react/prefer-es6-class': 2,
+    'react/prefer-stateless-function': 2,
+    'react/prop-types': 2,
+    'react/react-in-jsx-scope': 2,
+    'react/require-optimization': 0, // a bit brutal
+    'react/require-render-return': 2,
+    'react/self-closing-comp': 2,
+    'react/sort-comp': [
+      2,
       {
-        allowAllCaps: true,
-        ignore: [],
+        order: [
+          // allow to add props/state on top of react classes
+          'props',
+          'state',
+
+          // defaults
+          // eslint-disable-next-line max-len
+          // https://github.com/yannickcr/eslint-plugin-react/blob/master/lib/rules/sort-comp.js
+          'static-methods',
+          'lifecycle',
+          'everything-else',
+          'render',
+        ],
       },
     ],
-    'react/jsx-uses-react': 'warn',
-    'react/jsx-uses-vars': 'warn',
-    'react/no-danger-with-children': 'warn',
-    'react/no-deprecated': 'warn',
-    'react/no-direct-mutation-state': 'warn',
-    'react/no-is-mounted': 'warn',
-    'react/react-in-jsx-scope': 'error',
-    'react/require-render-return': 'error',
-    'react/style-prop-object': 'warn',
+    'react/sort-prop-types': 0,
+    'react/style-prop-object': 2,
+  
+    // deprecated with eslint v6
+    'react/require-extension': 0,
+    'react/wrap-multilines': 0,
+    'react/no-comment-textnodes': 0,
+
+    // too brutal
+    'react/forbid-elements': 0,
+    'react/forbid-foreign-prop-types': 0,
+    'react/no-array-index-key': 0,
+    'react/require-default-props': 0,
+    'react/void-dom-elements-no-children': 0,
 
     // https://github.com/gajus/eslint-plugin-flowtype
     'flowtype/define-flow-type': 'warn',
