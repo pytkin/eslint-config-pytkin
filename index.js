@@ -66,7 +66,7 @@ module.exports = {
 
   parser: 'babel-eslint',
 
-  plugins: ['import', 'flowtype', 'react'],
+  plugins: ['import', 'react'],
 
   env: {
     browser: true,
@@ -124,7 +124,7 @@ module.exports = {
     'react/jsx-filename-extension': 0,
     'react/jsx-handler-names': 2, // (?)
     'react/jsx-key': 2,
-    'react/jsx-no-bind": 2,
+    'react/jsx-no-bind': 2,
     'react/jsx-no-duplicate-props': 2,
     'react/jsx-no-literals': 0,
     'react/jsx-pascal-case': 2,
@@ -183,7 +183,7 @@ module.exports = {
     'react/sort-prop-types': 0,
     'react/style-prop-object': 2,
   
-    // deprecated with eslint v6
+    // deprecated
     'react/require-extension': 0,
     'react/wrap-multilines': 0,
     'react/no-comment-textnodes': 0,
@@ -193,11 +193,6 @@ module.exports = {
     'react/forbid-foreign-prop-types': 0,
     'react/no-array-index-key': 0,
     'react/require-default-props': 0,
-    'react/void-dom-elements-no-children': 0,
-
-    // https://github.com/gajus/eslint-plugin-flowtype
-    'flowtype/define-flow-type': 'warn',
-    'flowtype/require-valid-file-annotation': 'warn',
-    'flowtype/use-flow-type': 'warn',
+    'react/void-dom-elements-no-children': 0
   },
 };
