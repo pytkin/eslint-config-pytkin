@@ -5,7 +5,7 @@
   "bugs": {
     "url": "https://github.com/pytkin/eslint-config-pytkin-react/issues"
   },
-  main: "index.js",
+  "main": "index.js",
   "files": [
     "index.js",
     "react.js",
