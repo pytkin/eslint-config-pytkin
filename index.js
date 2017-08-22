@@ -115,7 +115,7 @@ module.exports = {
     "import/no-nodejs-modules": [0],
     "import/no-restricted-paths": [2],
     "import/no-unresolved": [2, { commonjs: true }],
-    "import/order": [2, { "newlines-between": "always" }],
+    "import/order": [2, { "newlines-between": "always" }], // (?)
     "import/prefer-default-export": [0],
   },
 
