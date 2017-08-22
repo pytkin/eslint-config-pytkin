@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-pytkin",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "repository": "pytkin/eslint-config-pytkin",
   "bugs": {
     "url": "https://github.com/pytkin/eslint-config-pytkin/issues"
