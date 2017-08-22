@@ -20,7 +20,7 @@
     "babel-eslint": "^7.2.3",
     "eslint-find-rules": "^1.14.3",
     "eslint-plugin-flowtype": "^2.34.1",
-    "eslint-plugin-react": "^7.1.0"
+    "eslint-plugin-react": "^7.1.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.3",
     "npm-run-all": "^4.0.2",
