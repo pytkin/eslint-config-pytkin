@@ -10,7 +10,7 @@ module.exports = {
       jsx: true,
     },
   },
-  
+
   env: {
     jest: true,
   },
@@ -18,15 +18,15 @@ module.exports = {
   rules: {
     // no styles rules (=> prettier)
     "jsx-quotes": 0,
-    
+
     // https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules
     "react/jsx-closing-bracket-location": 0,
     "react/jsx-curly-spacing": 0,
-    "react/jsx-equals-spacing": "never",
+    "react/jsx-equals-spacing": [2, "never"],
     "react/jsx-indent-props": 0,
     "react/jsx-indent": [2, 2],
     "react/jsx-max-props-per-line": 0,
-    "react/jsx-space-before-closing": "always",
+    "react/jsx-space-before-closing": [2, "always"],
     "react/jsx-wrap-multilines": 0,
     "react/jsx-boolean-value": [2, "never"],
     "react/jsx-filename-extension": 0,
@@ -43,7 +43,7 @@ module.exports = {
     "react/jsx-uses-vars": 2,
     "react/jsx-no-comment-textnodes": 2,
     "react/jsx-no-target-blank": 2,
-    
+
     "react/forbid-component-props": 0,
     "react/display-name": 0,
     "react/forbid-prop-types": 0,
@@ -90,7 +90,10 @@ module.exports = {
     ],
     "react/sort-prop-types": 0,
     "react/style-prop-object": 2,
-  
+    "react/no-redundant-should-component-update": 2,
+    "react/no-typos": 2,
+    "react/no-will-update-set-state": 2,
+
     // deprecated
     "react/require-extension": 0,
     "react/wrap-multilines": 0,
@@ -101,6 +104,7 @@ module.exports = {
     "react/forbid-foreign-prop-types": 0,
     "react/no-array-index-key": 0,
     "react/require-default-props": 0,
-    "react/void-dom-elements-no-children": 0
+    "react/void-dom-elements-no-children": 0,
+    "react/boolean-prop-naming": 0,
   },
 };

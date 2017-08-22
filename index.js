@@ -62,7 +62,7 @@ const restrictedGlobals = [
 module.exports = {
   // mostly good stuff
   extends: "eslint:recommended",
-  
+
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: "module",
@@ -81,7 +81,7 @@ module.exports = {
 
   rules: {
     // no styles rules (=> prettier)
-    
+
     "no-console": 0,
     "prefer-const": [2],
     "one-var": [2, "never"],
@@ -118,13 +118,13 @@ module.exports = {
     "import/order": [2, { "newlines-between": "always" }],
     "import/prefer-default-export": [0],
   },
-  
+
   settings: {
     "import/ignore": [
       "node_modules", // mostly CommonJS (ignored by default)
-      "\.json$", // import plugin does not seems to like json
-      "\.(css|scss|less)$", // can't parse unprocessed CSS
-      "\.(jpg|png|gif|svg|html|txt|md|woff|woff2|ttf|eot)$", // webpack !
+      ".json$", // import plugin does not seems to like json
+      ".(css|scss|less)$", // can't parse unprocessed CSS
+      ".(jpg|png|gif|svg|html|txt|md|woff|woff2|ttf|eot)$", // webpack !
     ],
   },
 };

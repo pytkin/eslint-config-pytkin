@@ -36,6 +36,6 @@ module.exports = {
     "flowtype/union-intersection-spacing": 0,
 
     // deprecated
-    "flowtype/valid-syntax": 0
+    "flowtype/valid-syntax": 0,
   },
 };

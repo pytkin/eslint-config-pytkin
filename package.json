@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-pytkin",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "repository": "pytkin/eslint-config-pytkin",
   "bugs": {
     "url": "https://github.com/pytkin/eslint-config-pytkin/issues"
@@ -18,7 +18,7 @@
   "devDependencies": {
     "eslint": "^4.5.0",
     "babel-eslint": "^7.2.3",
-    "eslint-find-rules": "^1.14.3",
+    "eslint-find-rules": "^3.1.1",
     "eslint-plugin-flowtype": "^2.34.1",
     "eslint-plugin-react": "^7.1.0",
     "husky": "^0.14.3",
@@ -29,9 +29,9 @@
   "scripts": {
     "#precommit": "setup by husky",
     "precommit": "lint-staged",
-    "check-update:index": "eslint-find-rules -u ./index.js",
-    "check-update:react": "eslint-find-rules -u ./react.js",
-    "check-update:flow": "eslint-find-rules -u ./flow.js",
+    "check-update:index": "eslint-find-rules -u -n ./index.js ",
+    "check-update:react": "eslint-find-rules -u -n ./react.js ",
+    "check-update:flow": "eslint-find-rules -u -n ./flow.js",
     "check-update": "npm-run-all --parallel check-update:*",
     "format": "prettier --write --trailing-comma=all \"*.js\" \"!(node_modules)/*.js\""
   },
