@@ -10,6 +10,10 @@ module.exports = {
       jsx: true,
     },
   },
+  
+  env: {
+    jest: true,
+  },
 
   rules: {
     // no styles rules (=> prettier)
