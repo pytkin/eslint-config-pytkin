@@ -2,22 +2,71 @@
 
 Based on [eslint-config-i-am-meticulous](https://github.com/MoOx/eslint-config-i-am-meticulous) (v6.0.1) and [eslint-config-react-app](https://github.com/facebookincubator/create-react-app/blob/master/packages/eslint-config-react-app/README.md) (v2.0.0)
 
+## Install
+
+```console
+$ npm i -D eslint eslint-config-pytkin
+```
+
+Note that the default config require [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
+
 ## Usage
 
-If you want to use this ESLint configuration in a project, you can install it with following steps.
+### Notes
 
-First, install this package, ESLint and the necessary plugins.
+- This config extends `eslint:recommended`.
+- You will need to adjust configuration syntax depending on your configuration
+  location (`package.json` or `.eslintrc`). Learn more about [configuring ESLint](http://eslint.org/docs/user-guide/configuring) on the ESLint website.
+- You might need to use ``babel-eslint`` if you use babel with fresh ES stages.
 
-  ```sh
-  npm i --D pytkin/eslint-config-pytkin
-  ```
+### React
 
-Then create a file named `.eslintrc` with following contents in the root folder of your project:
+```console
+$ npm i -D eslint eslint-plugin-react eslint-config-pytkin
+```
 
-  ```js
-  {
-    "extends": "pytkin"
+```json
+{
+  "eslintConfig": {
+    "extends": "eslint-config-pytkin/react"
   }
-  ```
+}
+```
 
-  That's it! You can override the settings from `eslint-config-pytkin` by editing the `.eslintrc` file. Learn more about [configuring ESLint](http://eslint.org/docs/user-guide/configuring) on the ESLint website.
+### Flow
+
+_This rule set require babel-eslint._
+
+```console
+$ npm i -D eslint babel-eslint eslint-plugin-flowtype eslint-config-pytkin
+```
+
+```json
+{
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "eslint-config-pytkin/flow"
+  }
+}
+```
+
+### React + Flow
+
+_This rule set require babel-eslint._
+
+```console
+$ npm i -D eslint babel-eslint eslint-plugin-flowtype eslint-config-pytkin
+```
+
+```json
+{
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "eslint-config-pytkin/react-flow"
+  }
+}
+```
+
+_This rule set is a combination of react and flow rule sets but add a tiny
+change to support props and state property initializers to be added at the top
+of classes (react/sort-comp default configuration does not allow that)._
