@@ -26,7 +26,8 @@ module.exports = {
     "react/jsx-indent-props": 0,
     "react/jsx-indent": [2, 2],
     "react/jsx-max-props-per-line": 0,
-    "react/jsx-space-before-closing": [2, "always"],
+    "react/jsx-space-before-closing": 0, // deprecated
+    "react/jsx-tag-spacing": [2, { "beforeSelfClosing": "always" }],
     "react/jsx-wrap-multilines": 0,
     "react/jsx-boolean-value": [2, "never"],
     "react/jsx-filename-extension": 0,
