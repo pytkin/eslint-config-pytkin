@@ -13,7 +13,7 @@
     "react-flow.js"
   ],
   "dependencies": {
-    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-import": "^2.6.0"
   },
   "devDependencies": {
     "eslint": "^4.5.0",
