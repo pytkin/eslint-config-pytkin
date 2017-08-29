@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-pytkin",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "repository": "pytkin/eslint-config-pytkin",
   "bugs": {
     "url": "https://github.com/pytkin/eslint-config-pytkin/issues"
@@ -10,7 +10,8 @@
     "index.js",
     "react.js",
     "flow.js",
-    "react-flow.js"
+    "react-flow.js",
+    "es5.js"
   ],
   "dependencies": {
     "eslint-plugin-import": "^2.6.0"
