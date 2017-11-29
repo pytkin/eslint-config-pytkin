@@ -4,7 +4,7 @@ module.exports = {
   // https://github.com/gajus/eslint-plugin-flowtype
   plugins: ["flowtype"],
 
-  extends: ["./index.js"],
+  extends: ["./index.js", "./_flow-globals.js"],
 
   rules: {
     // avoid false positive eslint errors
