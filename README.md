@@ -1,6 +1,6 @@
 # eslint-config-pytkin
 
-Based on [eslint-config-i-am-meticulous](https://github.com/MoOx/eslint-config-i-am-meticulous) (v6.0.1) and [eslint-config-react-app](https://github.com/facebookincubator/create-react-app/blob/master/packages/eslint-config-react-app/README.md) (v2.0.0)
+Based on [eslint-config-i-am-meticulous](https://github.com/MoOx/eslint-config-i-am-meticulous) (v7.0.1) and [eslint-config-react-app](https://github.com/facebookincubator/create-react-app/blob/master/packages/eslint-config-react-app/README.md) (v2.0.1)
 
 ## Install
 
