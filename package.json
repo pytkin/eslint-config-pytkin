@@ -1,12 +1,13 @@
 {
   "name": "eslint-config-pytkin",
-  "version": "0.9.5",
+  "version": "0.10.0",
   "repository": "pytkin/eslint-config-pytkin",
   "bugs": {
     "url": "https://github.com/pytkin/eslint-config-pytkin/issues"
   },
   "main": "index.js",
   "files": [
+    "_flow-globals.js",
     "index.js",
     "react.js",
     "flow.js",
@@ -14,18 +15,19 @@
     "es5.js"
   ],
   "dependencies": {
-    "eslint-plugin-import": "^2.6.0"
+    "eslint-plugin-import": "^2.8.0"
   },
   "devDependencies": {
-    "eslint": "^4.5.0",
+    "eslint": "^4.6.1",
     "babel-eslint": "^7.2.3",
     "eslint-find-rules": "^3.1.1",
-    "eslint-plugin-flowtype": "^2.34.1",
-    "eslint-plugin-react": "^7.1.0",
+    "eslint-plugin-flowtype": "^2.35.1",
+    "eslint-plugin-react": "^7.3.0",
+    "flow-bin": "^0.54.0",
     "husky": "^0.14.3",
-    "lint-staged": "^4.0.3",
-    "npm-run-all": "^4.0.2",
-    "prettier": "^1.5.3"
+    "lint-staged": "^4.1.0",
+    "npm-run-all": "^4.1.1",
+    "prettier": "^1.6.1"
   },
   "scripts": {
     "#precommit": "setup by husky",
