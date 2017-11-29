@@ -3,7 +3,7 @@ module.exports = {
 
   plugins: ["react"],
 
-  extends: ["./index.js"],
+  extends: ["./index.js", "./_flow-globals.js"],
 
   parserOptions: {
     ecmaFeatures: {
@@ -21,7 +21,17 @@ module.exports = {
 
     // https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules
     "react/jsx-closing-bracket-location": 0,
-    "react/jsx-curly-spacing": 0,
+    "react/jsx-curly-spacing": [
+      2,
+      "always",
+      {
+        "allowMultiline": false,
+        "spacing": {
+          "objectLiterals": "newer"
+        },
+        "children": true
+      }
+    ],
     "react/jsx-equals-spacing": [2, "never"],
     "react/jsx-indent-props": 0,
     "react/jsx-indent": [2, 2],
@@ -33,7 +43,13 @@ module.exports = {
     "react/jsx-filename-extension": 0,
     "react/jsx-handler-names": 2, // (?)
     "react/jsx-key": 2,
-    "react/jsx-no-bind": 2,
+    "react/jsx-no-bind": [
+      2,
+      {
+        "ignoreRefs": true,
+        "allowArrowFunctions": false
+      }
+    ],
     "react/jsx-no-duplicate-props": 2,
     "react/jsx-no-literals": 0,
     "react/jsx-pascal-case": 2,
@@ -93,6 +109,22 @@ module.exports = {
     "react/style-prop-object": 2,
     "react/no-redundant-should-component-update": 2,
     "react/no-typos": 2,
+    "react/no-will-update-set-state": 2,
+    "react/jsx-closing-tag-location": 0,
+    "react/jsx-curly-spacing": 0,
+    "react/jsx-equals-spacing": 0,
+    "react/jsx-first-prop-new-line": 0,
+    "react/jsx-indent-props": 0,
+    "react/jsx-indent": 0,
+    "react/jsx-max-props-per-line": 0,
+    "react/jsx-space-before-closing": 0,
+    "react/jsx-tag-spacing": 0,
+    "react/jsx-wrap-multilines": 0,
+    "react/boolean-prop-naming": 0,
+    "react/default-props-match-prop-types": [2, { "allowRequiredDefaults": true }],
+    "react/forbid-component-props": 0,
+    "react/no-redundant-should-component-update": 2,
+    "react/no-unused-state": 2,
     "react/no-will-update-set-state": 2,
 
     // deprecated
